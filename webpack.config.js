@@ -42,7 +42,8 @@ module.exports = (env, argv) => {
     test: /\.(png|jpe?g|gif|woff2?)$/i,
     loader: "file-loader",
     options: {
-      name: repName+"repName[hash].[ext]",
+      name: "[hash].[ext]",
+      publicPath: '../'
     },
   };
 

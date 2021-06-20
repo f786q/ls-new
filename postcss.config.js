@@ -20,7 +20,7 @@ module.exports = {
     require("postcss-rgb"),
     require("postcss-inline-svg")({
       removeFill: true,
-      paths: ["./src/images/icons"],
+      paths: ["/ls-new/src/images/icons"],
     }),
     require("cssnano"),
     require("postcss-pxtorem")({
