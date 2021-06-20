@@ -11,6 +11,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
   const publicPath = "";
+  const repName = "/ls-new/";
+
 
   const pcss = {
     test: /\.(p|post|)css$/,
@@ -40,7 +42,7 @@ module.exports = (env, argv) => {
     test: /\.(png|jpe?g|gif|woff2?)$/i,
     loader: "file-loader",
     options: {
-      name: "[hash].[ext]",
+      name: repName+"repName[hash].[ext]",
     },
   };
 
