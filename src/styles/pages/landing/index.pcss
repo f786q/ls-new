@@ -1,41 +1,65 @@
  
 .maincontent{
-    background: url(/src/images/content/theme-m@x3.png);
+    background: url(/src/images/content/theme.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-clip: unset;
     background-size: contain;
-
+ 
 }
 
 .landing{
   
 .title{
-    min-height: 100vh;
-    padding: 50px 0 0 0;
-    
+    min-height: 800px;
+    max-height: 100vh;
+    padding: 200px 0 0 0;
+     
+    text-align: center;
+    display: flex;    
+    margin: auto;
+    align-content: space-around;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;position: relative;
     &_description{
         font-family: Open Sans;
-        font-size: 14px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 600;
-        line-height: 19px;
+        line-height: 30px;
         letter-spacing: 0px;
-        text-align: center; 
-        padding: 0 90px; 
+        text-align: right;
+        padding: 15px;
+        
         color: rgba(255, 255, 255, 0.5);
         
         }
     &_mainText{
+        //styleName: Desktop/h1;
         font-family: Open Sans;
-        font-size: 36px;
+        font-size: 72px;
         font-style: normal;
         font-weight: 800;
-        line-height: 48px;
+        line-height: 50px;
         letter-spacing: 0px;
         text-align: center;
-        padding: 0 60px; 
+        padding: 15px;
+      
         color: white;
+        }
+
+        &_scroll{
+            position: absolute;
+            top: 500px;
+            color: white;
+            &:after{
+                content:url(/src/images/content/scroll.svg);
+                width: 45px;
+                height: 15px;
+                padding: 15px;
+            }
         }
 
 }

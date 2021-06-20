@@ -1,4 +1,114 @@
 .value{
 
-    
+    padding: 300px 55px 0 45px; 
+    background-image:   url(/src/images/content/wood.png);
+    background-color: rgba(28,32,35, 1);
+    margin-top: -5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+position: relative;
+    &--img{
+        position: absolute;
+        bottom: 0;
+        left: -130px;
+        width: 490px;
+        height: auto;
+        transform: rotate(90deg);
+    }
+    &_title{
+ 
+        font-family: Open Sans;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 41px;
+        letter-spacing: 0px;
+        text-align: left;
+        color:white;
+        flex-basis: 600px;
+        padding-bottom: 40px;
+
+    }
+
+    &_text{
+        //styleName: Desktop/Body 1 SemiBold;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0px;
+        text-align: left;
+        color:white;
+        flex-basis: 600px;
+        color: rgba(255, 255, 255, 0.8);
+
+    }
+
+    &_list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: flex-start;
+        color:white;
+        flex-basis: 1200px;
+        padding-left: 400px;
+        padding-top: 90px;
+        &--title{//styleName: Desktop/Body 1 Bold ;
+            font-family: Open Sans;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33px;
+            letter-spacing: 0px;
+            text-align: left;
+            flex-basis: 1000px;
+            }
+        &--item{
+            position: relative;
+            width: 166px;
+            height:166px;
+            text-align: center;    
+
+
+            &__text{
+                position: absolute;
+                font-family: Open Sans;
+                padding: 14px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color:rgba(255, 255, 255, 0.5);
+                margin:auto;
+            }
+
+            &__svg{
+               
+                &-under{           
+                    fill: transparent;
+                    stroke: rgba(233, 233, 233, 0.3);
+                    stroke-width: 1px;
+                }
+                &-above{          
+                    fill: transparent;
+                    stroke: rgba(208, 115, 27, 1);
+                    stroke-width: 6px;
+                    stroke-dasharray: 251;
+                    stroke-dashoffset: 120; 
+                }
+
+            }
+            
+                    }
+    }
 }

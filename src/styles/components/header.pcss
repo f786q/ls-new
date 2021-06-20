@@ -1,33 +1,11 @@
-/* .link-class {
-  width: 100px;
-  height: 100px;
-  fill: red;
-}
-
-.icon-bg {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  background: svg-load('github.svg', fill=$text-color, width=100%, height=100%);
-  &:hover {
-    background: svg-load('github.svg', fill=#55ddcc, width=100%, height=100%);
-  }
-}
-.maincontent{
-   width: 100%;
-   display: flex;
- }  */
-
-
-
- .header{
-   &_wrapper{
+  .header{   
+     
+   &_wrapper{padding: 60px 55px 0 45px; 
     display: flex;
-    padding: 60px 30px;    
     flex-wrap: nowrap;
     align-content: flex-end;
     justify-content: space-between;
-    align-items: center;
+     align-items: center;    flex-direction: row;
    } 
    &_logo{
  
@@ -38,7 +16,8 @@
      line-height: 49px;
      letter-spacing: 0px;
      text-align: left;
-     color: white;cursor: pointer;
+     color: white;cursor: pointer;    
+     flex-grow: 1;
      
    }
    &_menu-icon{
@@ -49,45 +28,68 @@
     background-size: contain;
     cursor: pointer;
    }
-  }
-
-   .menu{
-    max-height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    background: white;
-    
-    z-index: 10;
-
-    &_items{
-        padding: 160px 45px 100px;
+  
+    &_items{   
         display: flex;    
-        flex-direction: column;
+        flex-basis: 620px;
+        flex-grow: 3;
+        flex-direction: row;  
+        justify-content: space-evenly;
         align-content: space-around;
-        justify-content: flex-start;
         align-items: flex-start;
+        flex-wrap: nowrap;
     }  
-    &_item{list-style: none;
+    &_item{
+      list-style: none;
+    
       font-family: Open Sans;
-      font-size: 18px;
+      font-size: 16px;
       font-style: normal;
-      font-weight: 600;
-      line-height: 25px;
+      font-weight: 400;
+      line-height: 22px;
       letter-spacing: 0px;
       text-align: left;
+
+
       padding: 23px 0;
       cursor: pointer;
+      color: white;
+
+      &:hover,&:focus,&:active{
+        color: rgba(255, 154, 0, 1);
  
+      }
       &--link{
         text-decoration: none;
       }
+
+
     }
+
+&_links{
+  flex-grow: 1;     
+  display: flex;    
+  flex-direction: row;  
+  justify-content: space-between;
+  align-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+}
+&_link{
+  display: block;
+  width: 25px;
+  height: 25px;
+  svg{
+fill: rgba(255, 255, 255, 0.3);
+  }
+
+  &:hover,&:focus,&:active{
+    svg{fill: rgba(255, 154, 0, 1);
+    }
+  }
+}
+
 
     &_btn--close{  
       
@@ -104,5 +106,5 @@
       top:0;
  
     }
-   }
-  
+    
+}

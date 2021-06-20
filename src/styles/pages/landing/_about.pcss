@@ -1,19 +1,43 @@
 .about{
+    padding: 60px 55px 0 45px; 
 
+   // background-image:   url(/src/images/content/leafs.png);
+    background-color: rgba(28,32,35, 1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+    /* &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(28,32,35, .8);
+        z-index: 2;
+      } */
     &_logo{
-
-        padding: 90px  90px 0;
-        background:#1b1f22 ;
-        margin-top: -100px;
-
+        width: 200px;
+        height: 200px;
+        margin:auto;
+        flex-basis: 400px;
+        margin:auto;
+        flex-grow: 5;
         &--img{
 
-            border-radius: 90px;
+            border-radius: 390px;
+            margin:auto;
         }
     }
 
 
     &_worksheet{
+        flex-grow: 5;
+        flex-basis: 400px;
     padding: 45px 30px;
     display: flex;    
     flex-wrap: wrap;
@@ -21,7 +45,8 @@
     align-items: stretch;
     align-content: space-between;
     background:#1b1f22 ;
-    min-height: 165px;
+    
+    
         &--description{ 
             font-family: Open Sans;
             font-size: 14px;
@@ -32,6 +57,7 @@
             text-align: left;
             color: rgba(255, 255, 255, 0.3);
             flex-basis: 50%;
+            padding: 10px 0;
         }
 
         &--text{ 
@@ -44,44 +70,47 @@
             text-align: left;
             color: rgba(255, 255, 255, 1);
             flex-basis: 50%;
+            padding: 10px 0;
         }
     }
 
 
     &_story{    
         display: flex;   
-        min-height: 450px;
-        flex-direction: column;
+         flex-direction: column;
         justify-content: space-between;
         align-content: space-around;
         background:#1b1f22;
        padding: 0 30px;
        color: white;
-     
+       flex-basis: 700px;
+       flex-grow: 6;
 
         &--text{
-        //styleName: Mobile/Body 3 SemiBold;
-        font-family: Open Sans;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px;
-        letter-spacing: 0px;
-        text-align: left;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0px;
+            text-align: left;
+            
         flex-grow: 2;
+        padding-bottom: 20px;
 
         &.text--quote{        
             position: relative;   
             font-style: italic;
             &:before{
-       content:"*";font-family: Open Sans;
-       font-size: 36px;
+       content:"*";
+       font-family: Open Sans;
+       font-size: 48px;
        font-style: italic;
        font-weight: 400;
-       line-height: 49px;
+       line-height: 65px;
        letter-spacing: 0px;
        text-align: left;
-       left: -30px;
+       left: -55px;
        top: 0;
        position: absolute;
        width: 30px;
@@ -104,7 +133,7 @@
             letter-spacing: 0px;
             text-align: left;
             flex-grow: 1;
-            padding-bottom: 40px;
+            padding-bottom: 15px;
             }
 
     }

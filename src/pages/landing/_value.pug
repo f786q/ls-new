@@ -1,9 +1,18 @@
-section.value 
+section.value
+    +image("content/hands.png", 'value--img')
     h3.value_title Чем я могу быть полезен вам
     p.value_text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-
-    - const valueItems = {"Front-end":["HTML5", "CSS3", "Javascript","Jquery и Vue.js"],"Workflow":["GIT","Terminal","Gulp","Webpack"]};
+    ul.value_list
+        - const valueItems = {"Front-end":["HTML5", "CSS3", "Javascript","Jquery и Vue.js"],"Workflow":["GIT","Terminal","Gulp","Webpack"]};
         each value, key in valueItems
             h4.value_list--title= key
             each item, k in value
-             .value_list--item= item
+                li.value_list--item
+                    svg(viewBox="0 0 100 100").value_list--item__svg
+                        circle(cx="50" cy="50" r="40").value_list--item__svg-under
+                        circle(cx="50" cy="50" r="40" stroke="url(#gradient)" transform="rotate(180 50 50)").value_list--item__svg-above
+                        linearGradient(id="gradient" x1="0%" y1="0" x2="100%" y2="0%")   
+                            stop(offset="0%" stop-color="rgba(208, 115, 27, 1)")
+                            stop(offset="100%" stop-color="rgba(220, 147, 34, 1)")
+                    .value_list--item__text= item
+
