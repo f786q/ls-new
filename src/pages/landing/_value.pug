@@ -1,0 +1,9 @@
+section.value 
+    h3.value_title Чем я могу быть полезен вам
+    p.value_text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+    - const valueItems = {"Front-end":["HTML5", "CSS3", "Javascript","Jquery и Vue.js"],"Workflow":["GIT","Terminal","Gulp","Webpack"]};
+        each value, key in valueItems
+            h4.value_list--title= key
+            each item, k in value
+             .value_list--item= item

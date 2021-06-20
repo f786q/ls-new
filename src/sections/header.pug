@@ -1,12 +1,14 @@
+
 header.header_wrapper 
     .header_logo ВА
-    .header_menu--icon 
-
-section.menu
-    ul.menu_items
-    - const menuItems = ["Главная", "Навыки", "Работы:", "Отзывы"];
-    each value, key in menuItems
-        li.menu_item=value 
-    .menu_btn--close        
-    ul.menu_links
-        li.menu_link
+    .header_menu-icon(class="menu_open_btn__tag") 
+template 
+    menu.menu(class="menu_block__tag" v-bind:class={isExpanded})
+        ul.menu_items
+            - const menuItems = {"Главная":"", "Обо мне":"","Навыки":"", "Работы":"", "Отзывы":""};
+            each value, key in menuItems
+                li.menu_item
+                    a(class="menu_item--link" href="/" + value)= key
+                span(class='menu_btn--close menu_close_btn__tag' value="Дальше")        
+        ul.menu_links
+            li.menu_link
