@@ -1,15 +1,11 @@
 
 header.header_wrapper 
     .header_logo ВА
-    //- .header_header-icon(class="header_open_btn__tag") 
- 
- 
     ul.header_items
         - const headerItems = {"Обо мне":"","Навыки":"", "Работы":"", "Отзывы":""};
         each value, key in headerItems
             li.header_item
                 a(class="header_item--link" href="/" + value)= key
-            //- span(class='header_btn--close header_close_btn__tag' value="Дальше")        
     ul.header_links
         - const linkItems = {"insta":"/","github":"/", "vk":"/", "message":"/"};
         each value, key in linkItems

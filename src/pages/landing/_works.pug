@@ -1,15 +1,25 @@
 section.works 
-    .works_title Мои работы
-    .slider(class="works_slider") 
-    .arrows(class="works_arrows")
-
-    .tags   
     - const tagsItems = ["HTML5", "CSS", "Javascript"];
-    each value  in tagsItems
-        .tags_items= value
-        
-section.school
-    .school_title Сайт школы образования
-    .school_text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-    .school_link    Посмотреть сайт
+    - const sliderItems = ["1", "2", "3", "4"];
+    .works_title Мои работы
+    .works_wrapper
+        .slider(class="works_slider")
+            .works_slider--main
+                +image("content/preview"+sliderItems[0]+".jpg", 'works_slider--main__img')
+            .works_slider--previews
+                each value  in sliderItems
+                    .works_slider--preview
+                        +image("content/preview"+value+".jpg", 'works_slider--preview__img')
+            
+            .arrows(class="works_slider--arrows")
+      
+
+        .works_school
+            .works_tags  
+                each value  in tagsItems
+                    .works_tags--item= value
+            .works_school--wrapper
+                .works_school--title Сайт школы #[br] образования
+                .works_school--text Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool!#[br]  2 месяца только самых  тяжелых  #[br] испытаний и бессонных ночей!
+                .works_school--link Посмотреть сайт
 

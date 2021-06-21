@@ -1,15 +1,16 @@
 .section.reviews 
     .reviews_title Что обо мне говорят
     .arrows(class="reviews_arrows")
- 
-- const reviewItems = {"Ковальчук Дмитрий":["Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!", "Основатель Loftschool"],"Владимир Сабанцев":["Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах", "Преподаватель"]};
-each value, key in reviewItems
-     .slider(class="reviews_slider") 
-       .reviews_slider--text= value[0] 
-       .reviews_slider--user= key 
-        .reviews_slider--user_avatar 
-        .reviews_slider--user_avatar 
-        .reviews_slider--user_description= value[1] 
+    
+    - const reviewItems = {"Ковальчук Дмитрий":["Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!", "Основатель Loftschool","Dmitriy"],"Владимир Сабанцев":["Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах", "Преподаватель","Vladimir"]};
+    .slider(class="reviews_slider") 
+      each value, key in reviewItems
+          .reviews_slider--user 
+            .reviews_slider--user__text= value[0] 
+            .reviews_slider--user__avatar     
+              +image("content/"+value[2]+".png", 'reviews_slider--user__img')
+            .reviews_slider--user__name= key
+              .reviews_slider--user__description= value[1] 
 
 
 

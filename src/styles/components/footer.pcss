@@ -1,0 +1,146 @@
+.footer{
+    padding: 80px 60px 200px 60px; 
+background:rgba(34, 36, 39, 1);
+min-height: 400px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+align-content: flex-start;
+justify-content: space-evenly;
+&_copy{font-family: Open Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    letter-spacing: 0px;
+    text-align: left;
+    flex-basis: 20%;
+    order: 1;
+    color:rgba(255, 255, 255, 0.3);
+    }
+&_title{font-family: Open Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0px;
+    text-align: left;
+    order: 10;   
+     flex-basis: 20%;
+     color:rgba(255, 255, 255, 1);
+
+    }
+&_description{font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0px;
+    text-align: left;
+    order: 20;
+    flex-basis: 20%;
+    color:rgba(255, 255, 255, 0.3);   margin-top: 30px;
+    }
+&_text{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: left;
+    order: 15;
+    flex-basis: 40%;
+    color:rgba(255, 255, 255, 0.6);
+
+    &--author{
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0px;
+        text-align: left;
+        color:rgba(255, 255, 255, 1);
+        margin-top: 30px;
+
+    }
+   
+    }
+
+
+&_items{   
+    display: flex;    
+    flex-basis: 620px;
+    flex-grow: 3;
+    flex-direction: row;  
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    order: 5;
+    flex-basis: 80%; 
+ 
+
+}  
+&_item{
+  list-style: none;
+  margin-right: 60px;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 23px 0;
+  cursor: pointer;
+  color: white;
+
+  &:hover,&:focus,&:active{
+    color: rgba(255, 154, 0, 1);
+
+  }
+  &--link{
+    text-decoration: none; //styleName: Desktop/menu;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    
+  }
+}
+
+    &_links{
+        flex-grow: 1;     
+        display: flex;    
+        flex-direction: row;  
+        justify-content: flex-start;
+        align-content: space-around;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        margin: 30px 0;
+      }
+      &_link{
+        display: block;
+        width: 55px;
+        height: 55px;
+        padding: 15px;
+        border-radius: 360px;
+        border: solid 2px rgba(255, 255, 255, 0.3);
+        margin-right: 20px;
+        position: relative;
+        svg{
+      fill: rgba(255, 255, 255, 0.3);
+        }
+      
+        &:hover,&:focus,&:active{
+          svg{fill: rgba(255, 154, 0, 1);
+          }
+        }
+      }
+}
