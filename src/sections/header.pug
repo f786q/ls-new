@@ -1,5 +1,4 @@
-
-header.header_wrapper 
+header.header_wrapper.container
     .header_logo ВА
     ul.header_items
         - const headerItems = {"Обо мне":"","Навыки":"", "Работы":"", "Отзывы":""};
@@ -11,3 +10,5 @@ header.header_wrapper
         each value, key in linkItems
             a.header_link(href="" + value) 
                 +icon(key)
+
+    .menu_block(id="menu" v-on:click="toggle" v-bind:class="{ show: isOpened }")

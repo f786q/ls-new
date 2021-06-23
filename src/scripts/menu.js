@@ -1,20 +1,25 @@
+import Vue from "vue";
 
-export default {
-    name: "menu",
-    data() {
-        console.log('this is the menu module');
+ 
 
-      return {
-        isExpanded: false,
-      };
-    },
-    methods: {
-      collapse() {
-        this.isExpanded = false;
-      },
-  
-      toggle() {
-        this.isExpanded = !this.isExpanded;
-      },
-    },
-  };
+new Vue({
+  el: "#menu",
+  data: {
+    title: "hw",
+    isOpened: true
+  },
+  methods: {  
+    collapse() {
+    var t = this;
+    t.isOpened = false;
+  },
+
+    toggle(e) {
+      var t = this;
+      t.isOpened = !t.isOpened;
+      console.log(t.isOpened);
+  }
+  }
+
+
+});

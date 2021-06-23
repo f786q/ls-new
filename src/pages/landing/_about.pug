@@ -1,16 +1,17 @@
-section.about 
-    .about_logo            
-        +image("content/user.jpg", 'about_logo--img')
+section.about.container
+    .about_content.content 
+        .about_logo            
+            +image("content/user.jpg", 'about_logo--img')
 
-    .about_story 
-        p.about_story--text Привет, меня зовут
-        h4.about_story--title   Jean Paul
-        p.about_story--text   Я занимаюсь разработкой современных сайтов и приложений. #[br] Мне нравится делать интересные и современные проекты.
-  
-    .about_worksheet 
-        - const worksheet = {"Проживаю:": "Новосибирск", "Возраст:": "27", "Родился:": "1 января 1991"};
-        each value, key in worksheet
-            .about_worksheet--description= key
-            .about_worksheet--text= value
-    .about_story  
-        p.about_story--text(class="text--quote")   Этот сайт я сделал в рамках обучения в Школе онлайн образования  #[br] LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, #[br] как тут всё классно и красиво!
+        .about_story 
+            p.about_story--text Привет, меня зовут
+            h4.about_story--title   Jean Paul
+            p.about_story--text   Я занимаюсь разработкой современных сайтов и приложений. #[br] Мне нравится делать интересные и современные проекты.
+
+        .about_worksheet 
+            - const worksheet = {"Проживаю:": "Новосибирск", "Возраст:": "27", "Родился:": "1 января 1991"};
+            each value, key in worksheet
+                .about_worksheet--description= key
+                .about_worksheet--text= value
+        .about_story  
+            p.about_story--text(class="text--quote")   Этот сайт я сделал в рамках обучения в Школе онлайн образования  #[br] LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, #[br] как тут всё классно и красиво!
