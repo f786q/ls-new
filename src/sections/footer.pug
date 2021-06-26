@@ -1,18 +1,18 @@
 section.footer.container
-    .footer_copy © 2020
-    .footer_title Jean Paul
-        .footer_description Личный сайт веб-разработчика
-    .footer_text(class="quote--text") Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-        .footer_links
+    .footer__copy © 2020
+    .footer__title Jean Paul
+        .footer__description Личный сайт веб-разработчика
+    .footer__text(class="quote--text") Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+        .footer__links
             - const linkfooterItems = {"insta":"/","github":"/", "vk":"/", "message":"/"};
             each value, key in linkfooterItems
-                a.footer_link(href="" + value) 
+                a.footer__link(href="" + value) 
                     +icon(key) 
-    .footer_text(class="quote--text") Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
-        .footer_text--author Martin Golding
-    .footer_items
+    .footer__text(class="quote--text") Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+        .footer__text--author Martin Golding
+    .footer__items
         - const footerItems = {"Обо мне":"","Навыки":"", "Работы":"", "Отзывы":""};
         each value, key in footerItems
-            .footer_item
-                a(class="footer_item--link" href="/" + value)= key
+            .footer__item
+                a(class="footer__item--link" href="/" + value)= key
     
