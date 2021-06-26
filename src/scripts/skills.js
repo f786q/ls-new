@@ -5,10 +5,16 @@ const skillsItem = {
   template: '#skills-item',
   name: 'skills-item',
   mounted() {
-    const circle = this.$refs["colored-circle"]
-    const dashArray = parseInt(getComputedStyle(circle).getPropertyValue('stroke-dasharray'));
-    const percent = (dashArray / 100) * (100 - this.skill.percent);
-    circle.style.strokeDashoffset = percent; 
+    this.drawCirclePercentage();
+  },
+
+  methods: {
+      drawCirclePercentage(){
+        const circle = this.$refs["colored-circle"]
+        const dashArray = parseInt(getComputedStyle(circle).getPropertyValue('stroke-dasharray'));
+        const percent = (dashArray / 100) * (100 - this.skill.percent);
+        circle.style.strokeDashoffset = percent; 
+      }
   },
 }
 const skillsRow = {

@@ -1,25 +1,4 @@
 section.works.container 
-    - const tagsItems = ["HTML5", "CSS", "Javascript"];
-    - const sliderItems = ["1", "2", "3", "4"];
     .works__title Мои работы
     .works__wrapper
-        .slider(class="works__slider")
-            .works__slider--main
-                +image("content/preview"+sliderItems[0]+".jpg", 'works__slider--main__img')
-            .works__slider--previews
-                each value  in sliderItems
-                    .works__slider--preview
-                        +image("content/preview"+value+".jpg", 'works__slider--preview__img')
-            
-            .arrows(class="works__slider--arrows")
-      
-
-        .works__school
-            .works__tags  
-                each value  in tagsItems
-                    .works__tags--item= value
-            .works__school--wrapper
-                .works__school--title Сайт школы #[br] образования
-                .works__school--text Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool!#[br]  2 месяца только самых  тяжелых  #[br] испытаний и бессонных ночей!
-                .works__school--link Посмотреть сайт
-
+        #preview_component
