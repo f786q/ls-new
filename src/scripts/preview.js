@@ -5,14 +5,14 @@ const thumbs = {
   template: "#preview-thumbs",
 };
 
-const btns = {
-  template: "#preview-btns",
+const btn = {
+  template: "#preview-btn",
 };
 
 const display = {
   props: ["currentWork", "works", "currentIndex"],
   template: "#preview-display",
-  components: { thumbs, btns },
+  components: { thumbs, btn },
   computed: {
     reversedWorks() {
       const works = [...this.works];

@@ -18,8 +18,8 @@ script(type="text/x-template")#preview-display
         :works="reversedWorks"
         :currentWork="currentWork"
       )
-    .works__preview--btns
-      btns(
+    .works__preview--btn
+      btn(
         @slide="$emit('slide', $event)"
       )
 
@@ -32,16 +32,16 @@ script(type="text/x-template")#preview-thumbs
       button.thumbs__link
         img(:src="slide.photo").thumbs__pic
 
-script(type="text/x-template")#preview-btns
-  .btns_square
+script(type="text/x-template")#preview-btn
+  .btn_square
     button(
       type="button"
       @click="$emit('slide', 'next')"
-    ).btns_square__item.btns_square__item--next
+    ).btn_square__item.btn_square__item--next
     button(
       type="button"
       @click="$emit('slide', 'prev')"
-    ).btns_square__item.btns_square__item--prev
+    ).btn_square__item.btn_square__item--prev
 
 script(type="text/x-template")#preview-info
   .works__preview--info
