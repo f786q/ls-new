@@ -1,6 +1,7 @@
 script(type="text/x-template")#slider-container
   .slider
-    .slider__buttons
+    .slider__title Что обо мне говорят
+    .slider__buttons.slider__arrows
       button(
         type="button" @click="slide('prev')"
       ).slider__btn.btn__round.btn__round--right
@@ -9,15 +10,10 @@ script(type="text/x-template")#slider-container
       ).slider__btn.btn__round.btn__round--left
     swiper(ref="slider" :options="sliderOptions").slider__wrapper
       swiper-slide(v-for="review in reviews" :key="review.id")
-        .quote
-          .quote__text
-            p {{review.text}}
-          .quote__user
-            .user--display
-              .user--display__avatar
-                .user--display__avatar-style
-                  img(:src="review.pic").user--display__pic
-              .user--display__data
-                .user--display__name {{review.name}}
-                .user--display__occ {{review.occ}}
-            
+        .review__user
+            .review__user--text {{review.text}}
+            .review__user--avatar
+              img(:src="review.pic").review__user--img
+            .review__user--about    
+              .review__user--name {{review.name}}
+              .review__user--description {{review.occ}}            

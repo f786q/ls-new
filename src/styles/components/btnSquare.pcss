@@ -1,20 +1,29 @@
 .btn {
   &_square {
     display: flex;
-    min-height: 100px;
-    min-width: 34px;
+    height: 68px;
+    width: 34px;
     background: #333c49;
     flex-direction: column;
     flex-wrap: nowrap;
 
     justify-content: space-evenly;
     align-content: center;
+
+    @include phones {
+      min-height: 120px;
+      width: 55px;
+    }
     &__item {
       width: 100%;
       background: #2d3c4e;
       display: block;
       position: relative;
       height: 34px;
+      @include phones {
+        min-height: 55px;
+        width: 55px;
+      }
       &:before {
         content: '';
         background: svg-load(
@@ -35,6 +44,10 @@
         margin: auto;
         transform: rotate(deg);
         opacity: 0.3;
+        @include phones {
+          width: 10px;
+          height: 17px;
+        }
       }
       &:hover {
         &:before {
@@ -45,7 +58,6 @@
         &:before {
           transform: rotate(-180deg);
         }
- 
       }
       &--next {
         &:before {

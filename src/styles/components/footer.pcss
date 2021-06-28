@@ -1,5 +1,5 @@
 .footer{
-    padding: 80px 60px 200px 60px; 
+
 background:rgba(34, 36, 39, 1);
 min-height: 400px;
 display: flex;
@@ -8,6 +8,23 @@ flex-direction: row;
 align-items: center;
 align-content: flex-start;
 justify-content: space-evenly;
+
+@include desktopHd {
+  //max-width: 1497px;
+}
+
+@include desktop {
+  //max-width: 1200px;
+}
+
+@include tablets {
+ 
+}
+
+@include phones {
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
 &__copy{font-family: Open Sans;
     font-size: 48px;
     font-style: normal;
@@ -81,7 +98,10 @@ justify-content: space-evenly;
     flex-wrap: nowrap;
     order: 5;
     flex-basis: 80%; 
- 
+    @include phones {
+      flex-wrap: wrap;
+      justify-content: space-between
+    }
 
 }  
 &__item{

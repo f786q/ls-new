@@ -1,6 +1,18 @@
 .about {
   background-color: rgba(28, 32, 35, 1);
 
+  @include phones {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin-top: -40px !important;
+  }
+
+  @include desktopHd {
+    margin-top: -350px !important;
+    background-color: rgba(28, 32, 35, 1);
+  }
+
   &__content {
     display: flex;
     flex-wrap: wrap;
@@ -17,14 +29,33 @@
     flex-basis: 400px;
     margin: auto;
     flex-grow: 5;
+    @include phones {
+      order: 1;
+    }
     &--img {
       border-radius: 390px;
       margin: auto;
     }
+    @include desktopHd {
+      flex-basis: 50%;
+    }
   }
 
   &__worksheet {
+    @include phones {
+      order: 2;
+    }
+    @include desktopHd {
+      flex-basis: 50%;
+    }
   }
 
-  &__story { }
+  &__story {
+    @include phones {
+      order: 3;
+    }
+    @include desktopHd {
+      flex-basis: 50%;
+    }
+  }
 }

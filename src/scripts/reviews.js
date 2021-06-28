@@ -5,7 +5,7 @@ import "swiper/swiper-bundle.css";
 new Vue({
   el: "#slider-component",
   template: "#slider-container",
-  name:"slider-container",
+  name:"",
   components: {
     Swiper,
     SwiperSlide,
