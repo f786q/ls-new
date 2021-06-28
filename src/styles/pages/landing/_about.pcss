@@ -1,9 +1,7 @@
-.about{
- 
-    background-color: rgba(28,32,35, 1);
-    
-   
-   &__content{
+.about {
+  background-color: rgba(28, 32, 35, 1);
+
+  &__content {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -11,122 +9,22 @@
     justify-content: flex-start;
     align-items: baseline;
     position: relative;
-   }
-    &__logo{
-        width: 200px;
-        height: 200px;
-        margin:auto;
-        flex-basis: 400px;
-        margin:auto;
-        flex-grow: 5;
-        &--img{
-
-            border-radius: 390px;
-            margin:auto;
-        }
+  }
+  &__logo {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    flex-basis: 400px;
+    margin: auto;
+    flex-grow: 5;
+    &--img {
+      border-radius: 390px;
+      margin: auto;
     }
+  }
 
+  &__worksheet {
+  }
 
-    &__worksheet{
-        flex-grow: 5;
-        flex-basis: 400px;
-    padding: 45px 30px;
-    display: flex;    
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: space-between;
-    background:#1b1f22 ;
-    
-    
-        &--description{ 
-            font-family: Open Sans;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 19px;
-            letter-spacing: 0px;
-            text-align: left;
-            color: rgba(255, 255, 255, 0.3);
-            flex-basis: 50%;
-            padding: 10px 0;
-        }
-
-        &--text{ 
-            font-family: Open Sans;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 19px;
-            letter-spacing: 0px;
-            text-align: left;
-            color: rgba(255, 255, 255, 1);
-            flex-basis: 50%;
-            padding: 10px 0;
-        }
-    }
-
-
-    &__story{    
-        display: flex;   
-         flex-direction: column;
-        justify-content: space-between;
-        align-content: space-around;
-        background:#1b1f22;
-       padding: 0 30px;
-       color: white;
-       flex-basis: 700px;
-       flex-grow: 6;
-
-        &--text{
-            font-family: Open Sans;
-            font-size: 16px;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 30px;
-            letter-spacing: 0px;
-            text-align: left;
-            
-        flex-grow: 2;
-        padding-bottom: 20px;
-
-        &.text--quote{        
-            position: relative;   
-            font-style: italic;
-            &:before{
-       content:"*";
-       font-family: Open Sans;
-       font-size: 48px;
-       font-style: italic;
-       font-weight: 400;
-       line-height: 65px;
-       letter-spacing: 0px;
-       text-align: left;
-       left: -55px;
-       top: 0;
-       position: absolute;
-       width: 30px;
-       height: 38px;
-       color:rgba(219, 2, 0, 0.5);
-
-            }
-        }
-        color: rgba(255, 255, 255, 0.8);
-            &:nth-child(1){
-                flex-grow: 0; 
-            }
-        }
-
-        &--title{font-family: Open Sans;
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 36px;
-            letter-spacing: 0px;
-            text-align: left;
-            flex-grow: 1;
-            padding-bottom: 15px;
-            }
-
-    }
+  &__story { }
 }
