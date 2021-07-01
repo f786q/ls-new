@@ -1,0 +1,71 @@
+.landing {
+  .title {
+    min-height: 800px;
+    max-height: 100vh;
+    padding: 347px 0 0 0;
+
+    text-align: center;
+    display: flex;
+    margin: auto;
+    align-content: space-around;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative;
+    background: url(/src/images/content/theme.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-clip: unset;
+    background-size: cover;
+
+    @include phones {
+      background: url(/src/images/content/theme-m@x3.png);
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    @include desktopHd {
+        padding-bottom: 800px;
+    }
+    &__description {
+      font-family: Open Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: 0px;
+      text-align: right;
+      padding: 15px;
+
+      color: rgba(255, 255, 255, 0.5);
+      @include phones {
+        text-align: center;
+      }
+    }
+    &__mainText {
+      //styleName: Desktop/h1;
+      font-family: Open Sans;
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 50px;
+      letter-spacing: 0px;
+      text-align: center;
+      padding: 15px;
+
+      color: white;
+    }
+
+    &__scroll {
+      @include phones {
+        display: none;
+      }
+    }
+  }
+}

@@ -10,7 +10,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = "/";
+  const publicPath = "";
+  
+
 
   const pcss = {
     test: /\.(p|post|)css$/,
@@ -18,7 +20,7 @@ module.exports = (env, argv) => {
       isProductionBuild ? MiniCssExtractPlugin.loader : "vue-style-loader",
       "css-loader",
       "postcss-loader",
-    ],
+    ]
   };
 
   const vue = {
@@ -37,13 +39,21 @@ module.exports = (env, argv) => {
   };
 
   const files = {
-    test: /\.(png|jpe?g|gif|woff2?)$/i,
+    test: /\.(woff2?)$/i,
     loader: "file-loader",
     options: {
       name: "[hash].[ext]",
+       
     },
+    test: /\.(png|jpe?g|gif|woff2?)$/i,
+    loader: "file-loader",
+    options: {
+      name:  "[hash].[ext]",
+       
+    },
+ 
   };
-
+ 
   const svg = {
     test: /\.svg$/,
     use: [
@@ -118,6 +128,7 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "src/index.pug",
+        filename: "index.html",
         chunks: ["main"],
       }),
       new HtmlWebpackPlugin({

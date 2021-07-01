@@ -1,5 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
-@import "normalize.css";
-@import "./mixins.pcss";
-@import "./layout/base.pcss";
+@import 'normalize.css';
+@import './mixins.pcss';
+@import './layout/*.pcss';
 @import './blocks/*.pcss';
+@import './pages/*/*pcss';
+@import './components/*.pcss';
+
+.container {
+  padding: 60px 60px 60px 60px;
+  margin: -1px auto 0;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+
+  @include desktopHd {
+    padding: 60px 160px 60px 160px;
+  }
+
+  @include desktop {
+    padding: 60px 60px 60px 60px;
+  }
+
+  @include tablets {
+    padding: 60px 40px 60px 40px;
+  }
+
+  @include phones {
+    padding: 60px 30px 60px 30px;
+  }
+}
+.content {
+  width: 100%;
+  max-width: 1200px;
+  background: transparent;
+  margin: auto;
+
+  @include desktopHd {
+    max-width: 1497px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
+
+  @include tablets {
+    max-width: 100%;
+  }
+
+  @include phones {
+    max-width: 100%;
+  }
+}

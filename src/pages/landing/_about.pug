@@ -1,0 +1,17 @@
+section.about.container
+    .about__content.content 
+        .about__logo            
+            +image("content/user.jpg", 'about__logo--img')
+
+        .about__story.story 
+            p.story--text Привет, меня зовут
+            h4.story--title   Jean Paul
+            p.story--text   Я занимаюсь разработкой современных сайтов и приложений. #[br] Мне нравится делать интересные и современные проекты.
+
+        .about__worksheet.worksheet 
+            - const worksheet = {"Проживаю:": "Новосибирск", "Возраст:": "27", "Родился:": "1 января 1991"};
+            each value, key in worksheet
+                .worksheet--description= key
+                .worksheet--text= value
+        .about__story.story  
+            p.story--text(class="text--quote")   Этот сайт я сделал в рамках обучения в Школе онлайн образования  #[br] LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, #[br] как тут всё классно и красиво!

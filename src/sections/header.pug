@@ -1,0 +1,14 @@
+header.header__wrapper.container
+    .header__logo ВА
+    ul.header__items
+        - const headerItems = {"Обо мне":"","Навыки":"", "Работы":"", "Отзывы":""};
+        each value, key in headerItems
+            li.header__item
+                a(class="header__item--link" href="/" + value)= key
+    ul.header__links
+        - const linkItems = {"insta":"/","github":"/", "vk":"/", "message":"/"};
+        each value, key in linkItems
+            a.header__link(href="" + value) 
+                +icon(key)
+
+        .menu_block(id="menu" v-on:click="toggle" v-bind:class="{ show: isOpened }")
