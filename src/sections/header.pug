@@ -10,5 +10,5 @@ header.header__wrapper.container
         each value, key in linkItems
             a.header__link(href="" + value) 
                 +icon(key)
-
-        .menu_block(id="menu" v-on:click="toggle" v-bind:class="{ show: isOpened }")
+    
+    .btn__burger(id="menu" v-on:click="toggle" v-bind:class="{ show: isOpened }")

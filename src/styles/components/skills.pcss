@@ -1,4 +1,7 @@
 .skills {
+  &__list {
+    text-align: center;
+  }
   &__row {
     display: flex;
     flex-direction: row;
@@ -14,6 +17,7 @@
     @include phones {
       flex-basis: 100%;
       padding: 0;
+      text-align: center;
     }
     @include tablets {
       flex-basis: 100%;
@@ -36,6 +40,12 @@
     text-align: left;
     flex-basis: 1000px;
     margin-bottom: 15px;
+    @include phones {
+      flex-basis: 100%;
+      padding: 0;
+      text-align: center;
+      margin: 70px auto 40px;
+    }
   }
 }
 

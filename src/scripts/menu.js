@@ -6,7 +6,7 @@ new Vue({
   el: "#menu",
   data: {
     title: "hw",
-    isOpened: true
+    isOpened: false
   },
   methods: {  
     collapse() {

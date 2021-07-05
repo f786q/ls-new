@@ -8,6 +8,9 @@
   text-align: left;
   color: rgba(88, 110, 211, 1);
   position: relative;
+  @include phones {
+    text-decoration: none;
+  }
   &:before {
     content: svg-load(
       'link-2.svg',

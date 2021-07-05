@@ -16,7 +16,6 @@
     justify-content: flex-start;
     align-items: center;
   }
- 
 
   &--pictures {
     width: 58%;
@@ -37,6 +36,9 @@
       font-weight: 800;
       color: rgba(65, 76, 99, 0.05);
       transform: translateX(59%);
+      @include phones {
+        display: none;
+      }
     }
   }
 
@@ -70,7 +72,7 @@
     width: 34px;
     bottom: 20px;
     right: -34px;
- 
+
     @include phones {
       right: 0;
       bottom: 0;
