@@ -1,5 +1,5 @@
 # Учебный шаблон проекта Portfolio
-
+# Kudryashova Polina 14.06.2021
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
 [последняя версия Yarn](https://classic.yarnpkg.com/en/docs/install)
 

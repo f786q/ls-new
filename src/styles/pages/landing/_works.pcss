@@ -1,0 +1,56 @@
+.works {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 150px;
+    padding: 85px 0;
+    @include phones {
+      padding: 25px 0 0;
+    }
+  }
+
+  &__title {
+    //styleName: Desktop/h2;
+    font-family: Open Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding: 145px 0px 0 0px;
+    color: rgba(51, 60, 73, 1);
+    flex-basis: 100%;
+    @include phones {
+      padding: 90px 30px 0px 30px;
+      text-align: center;
+    }
+  }
+  @include phones {
+    padding: 0 !important;
+  }
+
+  &__preview {
+    &--pictures {
+      @include phones {
+      }
+    }
+    &--tags {
+      @include phones {
+        margin-bottom: 22px !important;
+      }
+    }    &--title {
+      @include phones {
+        margin-bottom: 10px !important;
+      }
+    }
+    &--info {
+      @include phones {
+        padding: 60px 30px 100px 30px;
+      }
+    }
+  }
+}

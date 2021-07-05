@@ -1,0 +1,23 @@
+header.header__wrapper.container
+    .header__logo ВА
+    ul.header__items
+        - const headerItems = {"Обо мне":"","Навыки":"", "Работы":"", "Отзывы":""};
+        each value, key in headerItems
+            li.header__item
+                a(class="header__item--link" href="/" + value)= key
+    ul.header__links
+        - const linkItems = {"insta":"/","github":"/", "vk":"/", "message":"/"};
+        each value, key in linkItems
+            a.header__link(href="" + value) 
+                +icon(key)
+    
+    .btn__burger.header__menu(id="menu" v-on:click="toggle" v-bind:class="{ show: isOpened }")
+        .header__menu--wrapper
+            ul.header__items
+                each value, key in headerItems
+                    li.header__item
+                        a(class="header__item--link" href="/" + value)= key
+            ul.header__links
+                each value, key in linkItems
+                    a.header__link(href="" + value) 
+                        +icon(key)

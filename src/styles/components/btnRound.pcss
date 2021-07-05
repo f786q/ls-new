@@ -1,0 +1,39 @@
+.btn {
+  &__round {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    position: relative;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 14px;
+    @include phones {
+      width: 53px !important;
+      height: 53px !important;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:before {
+      content: '';
+      width: 8px;
+      height: 10px;
+      display: block;
+      background: svg-load('arrow-down.svg', fill=white) center center / contain
+        no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include phones {
+        width: 18px;
+        height: 53px;
+      }
+    }
+    &--right {
+      &:before {
+        transform: translate(-50%, -50%) rotate(-180deg);
+      }
+    }
+  }
+}
