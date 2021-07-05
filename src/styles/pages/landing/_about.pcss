@@ -21,6 +21,10 @@
     justify-content: flex-start;
     align-items: baseline;
     position: relative;
+    @include tablets {
+      align-content: flex-start !important;
+      align-items: flex-start;
+    }
   }
   &__logo {
     width: 200px;
@@ -31,6 +35,10 @@
     flex-grow: 5;
     @include phones {
       order: 1;
+    }
+    @include tablets {
+      flex-basis: 30% !important;
+      margin: 0;
     }
     &--img {
       border-radius: 390px;
@@ -45,6 +53,11 @@
     @include phones {
       order: 2;
     }
+    @include tablets {
+      flex-basis: 30% !important;
+      margin: 0;
+      padding: 0 !important;
+    }
     @include desktopHd {
       flex-basis: 50%;
     }
@@ -53,6 +66,10 @@
   &__story {
     @include phones {
       order: 3;
+    }
+    @include tablets {
+      flex-basis: 60% !important;
+      margin: 0;
     }
     @include desktopHd {
       flex-basis: 50%;

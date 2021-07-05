@@ -1,10 +1,9 @@
 .header {
-
-  &__wrapper {  
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     margin: auto;
     display: flex;
     flex-wrap: nowrap;
@@ -13,6 +12,9 @@
     align-items: center;
     flex-direction: row;
     z-index: 3;
+    @include phones {
+      justify-content: space-between;
+    }
   }
   &__logo {
     font-family: Open Sans;
@@ -26,6 +28,10 @@
     cursor: pointer;
     flex-grow: 85;
     max-width: 120px;
+    @include tablets {
+      flex-basis: 60%;
+      max-width: 700px;
+    }
   }
   &__menu-icon {
     width: 30px;
@@ -60,6 +66,7 @@
 
     @include phones {
       display: none;
+      flex-basis: 0%;
     }
   }
   &__item {
@@ -76,6 +83,7 @@
     padding: 23px 0;
     cursor: pointer;
     color: white;
+
     @include desktopHd {
       //max-width: 1497px;
     }
@@ -85,7 +93,6 @@
     }
 
     @include tablets {
-      display: none;
     }
 
     @include phones {
@@ -100,7 +107,22 @@
       text-decoration: none;
     }
   }
+  &__menu {
+    display: none;
+    flex-basis: 20%;
+    @include phones {
+      display: block;
+    }
 
+    @include tablets {
+      display: block;    flex-basis: auto;
+    }
+    &--wrapper {
+      display: none;
+    }
+    &.show {
+    }
+  }
   &__links {
     flex-grow: 12;
     display: flex;
@@ -119,7 +141,9 @@
     }
 
     @include tablets {
-      
+      flex-basis: 20%;     
+      margin-right: 88px;
+      min-width: 215px;
     }
 
     @include phones {
@@ -133,7 +157,7 @@
     svg {
       fill: rgba(255, 255, 255, 0.3);
     }
-
+ 
     &:hover,
     &:focus,
     &:active {
